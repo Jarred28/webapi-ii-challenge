@@ -14,5 +14,15 @@
   },
   "devDependencies": {
     "nodemon": "^1.19.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jarred28/webapi-ii-challenge.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jarred28/webapi-ii-challenge/issues"
+  },
+  "homepage": "https://github.com/Jarred28/webapi-ii-challenge#readme"
 }
