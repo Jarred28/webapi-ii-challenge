@@ -3,12 +3,6 @@ const router = require('express').Router();
 
 const Posts = require ('../data/db.js')
 
-// router.get('/', (req, res) => {
-//   const queryParameters = req.query
-//   console.log(queryParameters)
-//   res.send('SUCCESS!')
-// })
-
 router.get('/', (req, res) => {
   Posts.find()
   .then (posts => {
@@ -88,7 +82,7 @@ router.post('/:id/comments', (req, res) => {
   if (!comment.text) {
     res.status(400).json({ errorMessage: "Please provide text for the comment." })
     return
-    //forces us to be done "cancelling" the request
+    
   }
 
   Posts.insertComment(comment)
@@ -106,5 +100,8 @@ router.post('/:id/comments', (req, res) => {
     })
   })
 })
+
+//
+
 
 module.exports = router;
