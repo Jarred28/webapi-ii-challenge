@@ -1,17 +1,5 @@
-const express = require('express');
-const server = express()
+const server = require('./server.js');
 
-const channelsRouter = require('./channels/channels-router.js');
-
-server.use(express.json());
-
-server.get('/', (req, res) => {
-  const queryParameters = req.query
-  console.log(queryParameters)
-  res.send('YAY')
+server.listen(6000, () => {
+    console.log('port running on local host 6000')
 })
-
-server.use('/api/posts', channelsRouter)
-
-const port = 6000;
-server.listen(port, () => console.log('api running'));
